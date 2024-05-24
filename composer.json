@@ -7,8 +7,12 @@
     "require": {
         "php": "^8.2",
         "laravel/framework": "^11.0",
+        "laravel/reverb": "@beta",
+        "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
-        "livewire/livewire": "^3.5"
+        "livewire/livewire": "^3.5",
+        "spatie/laravel-permission": "^6.7",
+        "spatie/laravel-sluggable": "^3.6"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -25,13 +29,17 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+        "files": [
+            "app/Helpers/RoleHelper.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
         }
     },
+
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
